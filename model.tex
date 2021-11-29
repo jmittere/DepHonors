@@ -1,0 +1,70 @@
+\section{Model}
+
+The model is presented using an abbreviated version of the ODD
+protocol\cite{grimm_standard_2006}.
+
+\subsection{Purpose}
+
+% Make this compatible with definitions in Polarization lit review
+
+The model simulates interactions on a random social network of agents, each
+with an array of continuous, numeric \textbf{opinion} attributes. Its purpose
+is to investigate the way in which two factors contribute to the emergence of
+polarization in the network: the \textbf{edge\_probability}, a value reflecting
+the density of social connections in the network; and the \textbf{openness}, a
+value representing how closely one of an agent's opinions must be to that of a
+potential influencer in order to accept influence. (See
+Section~\ref{modelProcess}, below.)
+
+Using the model, we hope to gain general insight on the emergence of this
+polarization within social networks and how different parameters affect this.
+
+\subsection{Entities, State Variables and Scales}
+
+The entities within the model are Agents, having the following attributes:
+
+\begin{description}
+\item[ID] A unique ID for the agent.
+\item[Opinions] An array of numbers, representing opinions on issues, each
+having a value between 0 and 1. This represents the degree to which the agent
+``agrees'' or ``disagrees'' with an issue, with 0.5 being neutral.
+\item[Neighbors] A subset of the other agents in the model, to whom this Agent
+has a social connection. The entire set of Agents and their social connections
+form an undirected graph (\textit{i.e.}, all social connections are
+bidirectional) and the graph is fixed throughout the simulation.
+
+\end{description}
+
+
+\subsection{Process Overview and Scheduling}
+\label{modelProcess}
+
+After the model has been initialized, the following sequence is executed for
+each of a fixed number of steps in the simulation:
+
+\begin{compactenum}
+\item An agent $X$ is chosen at random.  
+\item A neighbor of $X$ (call it $Y$) is chosen at random.
+\item An issue $I_1$ is chosen at random.
+\item The absolute difference between $X$'s opinion on $I_1$ and Y's opinion on
+$I_1$ is measured.
+\item Another opinion $I_2$ ($\neq I_1$) is chosen at random.
+\item If the difference between $X$'s and $Y$'s opinion on issue $I_1$ is less
+than or equal to the model's \textbf{openness} parameter, set $X$'s opinion on
+$I_2$ to be the average of $X$'s and $Y$'s current $I_2$ opinions.
+\end{compactenum}
+
+
+
+\subsection{Initialization}
+
+The simulation is initialized with 50 agents, each having 5 opinions set to
+independent uniform random values between 0 and 1. The agents are then
+connected to each other using a random undirected Erd\"{o}s-R\'{e}nyi
+graph\cite{erdos_random_1959} with parameters\ $N=50,
+p=\textbf{edge\_probability}$. (If the graph is not connected, a new random
+graph is generated until a connected one is obtained.)
+
+The model's step limit is usually set to 150, as most change in the agent's
+opinions after 150 steps is negligible.
+

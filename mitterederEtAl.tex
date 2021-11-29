@@ -1,0 +1,66 @@
+\documentclass[sigconf]{acmart}
+
+\usepackage{booktabs} % For formal tables
+\usepackage{paralist} % For compactenum/compactitem
+
+
+% Copyright
+%\setcopyright{none}
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+
+
+\copyrightyear{2021}
+
+
+\begin{document}
+\title{Exploring the Impact of Social Influence Mechanisms\\ on Societal Polarization}
+%\titlenote{Produces the permission block, and
+ % copyright information}
+%\subtitle{Extended Abstract}
+%\subtitlenote{The full version of the author's guide is available as
+ % \texttt{acmart.pdf} document}
+
+\author{Justin Mittereder}
+\affiliation{%
+  \institution{University of Mary Washington\\Department of Computer Science}
+  \streetaddress{1301 College Avenue}
+  \city{Fredericksburg}
+  \state{Virginia}
+  \postcode{22401}
+}
+\email{jmittere@umw.edu}
+
+
+% The default list of authors is too long for headers.
+\renewcommand{J. Mittereder}
+
+\input{abstract}
+
+\ccsdesc[500]{Computing methodologies~Modeling and simulation}
+\ccsdesc[500]{Computing methodologies~Agent / discrete models}
+
+\keywords{opinion dynamics, echo-chambers, binary voter model, social networks, polarization}
+
+\maketitle
+
+\input{intro}
+\input{topicintro}
+\input{litreview}
+\input{variables}
+\input{model}
+\input{hypothesis}
+\input{results}
+\input{discussion}
+
+\appendix
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{mitterederEtAl}
+\end{document}

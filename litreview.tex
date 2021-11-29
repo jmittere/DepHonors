@@ -1,0 +1,116 @@
+\section{Related work}
+
+\subsection{Opinion Dynamics}
+
+Opinion Dynamics models seek to reproduce the phenomenon of individual agents
+forming opinions over time via mutual influence. They allow the researcher to
+explore the macro-level patterns that may arise in a society from a set
+of simple influence rules defined on the micro-level. For instance, the Binary
+Voter Model (BVM), the original and perhaps most influential OD model
+(\cite{clifford_model_1973, holley_ergodic_1975}), features a set of
+interacting agents, each of which holds a binary opinion. The single influence
+rule is that agents periodically change their opinion to match one of their
+influencers, chosen at random. Among other things, the model demonstrates that
+such a system will always eventually reach uniformity of opinion.
+
+Many researchers (\textit{e.g.}, \cite{ghaderi_opinion_2012,
+weisbuch_interacting_2001}) have expanded this idea to model continuous, rather
+than discrete, opinions: these are typically expressed as real numbers between
+0 and 1. In addition to better capturing the nuance of real-life viewpoints
+(which are not usually completely black or white on any issue), continuous
+opinions lead naturally to incorporating a form of
+\textbf{homophily}\cite{mcpherson_birds_2001} into the model: agents will only
+choose to be influenced by agents whose existing opinion is already close to
+their own. Termed ``\textbf{bounded confidence}'' (BC) by
+\cite{hegselmann_opinion_2002}, this feature can result in non-convergence to
+uniformity depending on the value of the threshold agents use to gate
+influence.\cite{hegselmann_opinion_2002, deffuant_mixing_2000,
+tsang_opinion_2014} The term ``\textbf{clustering}'' (or ``opinion
+clustering'') has been used to describe the resulting equilibrium reached by
+such models, in which subsets of the agents each converge on a different
+opinion value and are henceforth no longer persuadable by other agents.
+
+A smaller number of studies have considered ``\textbf{multidimensional
+opinions},'' in which each agent maintains a separate opinion on each of
+several different ``issues'' rather than on just one.\footnote{This is to be
+carefully distinguished from ``\textbf{opinion vectors},'' which represent an
+agent's degree of support for each of several alternatives on the \textit{same}
+issue. (See, \textit{e.g.}, \cite{sirbu_opinion_2013}.) Unlike multidimensional
+opinions, these opinion vectors are often restricted to be members of a
+probability simplex.\\\indent To be concrete about the difference, an agent in
+a model with multidimensional opinions might have a value of .8 for the
+``pro-gun control'' issue, .9 for the ``raise the minimum wage'' issue, and .4
+for the ``restrict fracking'' issue. By contrast, an agent in a model with
+opinion vectors might have a value of .2 for the ``raise taxes to fund
+infrastructure'' alternative, .7 for the ``cut military spending to fund
+infrastructure'' alternative, and .1 for the ``increase IRS audits to fund
+infrastructure'' alternative, all possible solutions to the single ``how to
+fund infrastructure'' issue. In the latter case, the options are considered
+mutually exclusive and must sum to 1 for any agent.\\\indent (Of course, the
+specific real-world examples here are only for illustration; OD models
+represent ``issues'' and the ``opinions'' about them completely abstractly.)}
+The opinions in a multidimensional setting have been modeled as discrete
+(\cite{deffuant_mixing_2000}) or even as boolean variables combined in
+arbitrary logic formulas (\cite{van_den_herik_modelling_2019,
+cholvy_diffusion_2016}). Oddly, modeling multidimensional opinions as an array
+of continuous values is rarely seen. One purpose of using multidimensional
+opinions could be to see how an agent's opinions on different issues interact
+with one another. This is explored by the boolean expressions in
+\cite{van_den_herik_modelling_2019} and \cite{cholvy_diffusion_2016}; in
+\cite{deffuant_mixing_2000} the multidimensional opinion for each agent is
+instead used merely as an element in a vector space whose (Hamming) distance
+from other agents' multidimensional opinions can be computed and compared to a
+BC threshold.
+
+With respect to these previous efforts, our model resembles the BVM but gives
+the agents continuous, multidimensional opinions. Our model also implements BC, but in
+a different way than models like \cite{tsang_opinion_2014} do: before accepting
+the influence of a fellow agent on an issue, an agent in our model must already
+be close in opinion to that agent on a \textit{different} issue. This mechanism we refer to as  
+cross-issue influence is meant to mimic a phenomenon of human behavior: if I learn that your viewpoint on
+issue A is close to my own, homophily suggests that I will trust you, and I
+will therefore be willing to consider your viewpoint on issue B. To our
+knowledge, this mechanism of agent influence has not been previously explored.
+
+\subsection{Polarization}
+
+Polarization can mean different things to different people; we therefore begin
+by briefly establishing a dictionary of terms that we will refer back to
+throughout this paper.
+
+Arguably the most familiar manifestation of polarization -- which we term
+``\textbf{diametricity}'' -- is when a group experiences opinions shifting away
+from common ground to polar sides, leaving nobody `in the middle' on a specific
+issue. We do not study this flavor of polarization in this paper.
+
+We use the graph theory term \textbf{assortativity} to represent a second type
+of polarization, which is rooted in the tendency that people have to form
+connections with people who have similar views. This idea is supported by
+\cite{klinkner_red_2005} which focuses on physical proximity breeding
+connections, as well as \cite{cholvy_diffusion_2016} which states that we are
+more likely to form connections with those that we already are in agreement
+with on another issue. The well-known concept of homophily comes into play
+here, as studied in \cite{davies_twin_2017} and \cite{taylor_exploring_2018}.
+Assortativity is a way to quantify the presence of ``echo chambers'' in a
+society, in which people are exposed mostly (or solely) to opinions that
+confirm what they already
+believe.\cite{dandekar_biased_2013,flaxman_filter_2016}
+
+Finally, a third form of polarization is one that can be measured as follows:
+how often do opinions on issues result in \textbf{clustering}? For
+example, if all individuals had the same belief, there would be one opinion
+cluster. However, in a polarized society, there are clusters of opinions for any given issue. In this way, higher clustering in a society represents when individuals are entrenched and no longer willing to change their opinion on a given issue. The mechanism that we use in this paper to calculate the number of opinion clusters will be explained later.
+
+Regarding the role of a society's ``openness,'' one question that arises is the
+psychological basis for this attribute. Which personality trait plays the
+biggest role in an individual's likelihood to change their opinions on a
+particular issue? The `Big 5' personality trait group\cite{john_big-five_1999},
+well-researched since the 1980s, contains Openness-to-Experience (OE) as one of
+its five traits. OE can be defined as ``cognitive
+flexibility''\cite{deyoung_sources_2005}, or ``[openness can be] associated
+with having a vivid imagination and [...] receptivity to one's own and other's
+emotions; a willingness to try new experiences''\cite{furnham_childhood_2016}.
+As the research shows, openness plays a crucial role in an individual's ability
+to relate to others, as well as to consider adopting outside ideas as their
+own. More than the Big 5's Agreeableness and Conscientiousness traits, OE seems
+to reflect well what our model is attempting to capture.
