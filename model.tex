@@ -9,11 +9,11 @@ protocol\cite{grimm_standard_2006}.
 
 The model simulates interactions on a random social network of agents, each
 with an array of continuous, numeric \textbf{opinion} attributes. Its purpose
-is to investigate the way in which two factors contribute to the emergence of
+is to investigate the way in which multiple factors contribute to the emergence of
 polarization in the network: the \textbf{edge\_probability}, a value reflecting
-the density of social connections in the network; and the \textbf{openness}, a
+the density of social connections in the network; the \textbf{openness} threshold, a
 value representing how closely one of an agent's opinions must be to that of a
-potential influencer in order to accept influence. (See
+potential influencer in order to accept influence; the \textbf{disgust} threshold, a value representing how far away one of an agent's opinions must be to that of a potential influencer in order to be repelled away on an issue; and the presence of agents following the cross-issue influence mechanism or the same-issue influence mechanism. (See
 Section~\ref{modelProcess}, below.)
 
 Using the model, we hope to gain general insight on the emergence of this
@@ -40,7 +40,7 @@ bidirectional) and the graph is fixed throughout the simulation.
 \label{modelProcess}
 
 After the model has been initialized, the following sequence is executed for
-each of a fixed number of steps in the simulation:
+each of a fixed number of steps in the simulation for cross-issue influence agents:
 
 \begin{compactenum}
 \item An agent $X$ is chosen at random.  
@@ -50,21 +50,39 @@ each of a fixed number of steps in the simulation:
 $I_1$ is measured.
 \item Another opinion $I_2$ ($\neq I_1$) is chosen at random.
 \item If the difference between $X$'s and $Y$'s opinion on issue $I_1$ is less
-than or equal to the model's \textbf{openness} parameter, set $X$'s opinion on
+than or equal to the model's \textbf{openness} threshold, set $X$'s opinion on
 $I_2$ to be the average of $X$'s and $Y$'s current $I_2$ opinions.
+\item If the difference between $X$'s and $Y$'s opinion on issue $I_1$ is greater
+than or equal to the model's \textbf{disgust} threshold, set $X$'s opinion on
+$I_2$ to be the difference between $X$'s opinion and the average of $X$'s and $Y$'s current $I_2$ opinions plus $X$'s previous opinion. Note that in this case, $X$'s opinion will move away from $Y$'s on $I_2$. \\ 
+\end{compactenum} 
+
+For same-issue influence agents, the following sequence is executed:
+\begin{compactenum}
+\item An agent $X$ is chosen at random.  
+\item A neighbor of $X$ (call it $Y$) is chosen at random.
+\item An issue $I_1$ is chosen at random.
+\item The absolute difference between $X$'s opinion on $I_1$ and Y's opinion on
+$I_1$ is measured.
+\item If the difference between $X$'s and $Y$'s opinion on issue $I_1$ is less
+than or equal to the model's \textbf{openness} threshold, set $X$'s opinion on
+$I_1$ to be the average of $X$'s and $Y$'s current $I_1$ opinions.
+\item If the difference between $X$'s and $Y$'s opinion on issue $I_1$ is greater
+than or equal to the model's \textbf{disgust} threshold, set $X$'s opinion on
+$I_1$ to be the difference between $X$'s opinion and the average of $X$'s and $Y$'s current $I_1$ opinions plus $X$'s previous opinion. Note that in this case, $X$'s opinion will move away from $Y$'s on $I_1$. 
 \end{compactenum}
-
-
 
 \subsection{Initialization}
 
-The simulation is initialized with 50 agents, each having 5 opinions set to
-independent uniform random values between 0 and 1. The agents are then
+The simulation is initialized with 100 agents, each having a variable number of opinions set to
+independent uniform random values between 0 and 1. The model is initialized with all agents either following the cross-issue influence mechanism or the same-issue influence mechanism. The agents are then
 connected to each other using a random undirected Erd\"{o}s-R\'{e}nyi
-graph\cite{erdos_random_1959} with parameters\ $N=50,
-p=\textbf{edge\_probability}$. (If the graph is not connected, a new random
-graph is generated until a connected one is obtained.)
+graph\cite{erdos_random_1959} with parameters\ $N=100,
+p=\textbf{edge\_probability}$. If the graph is not connected, a new random
+graph is generated until a connected one is obtained.
 
-The model's step limit is usually set to 150, as most change in the agent's
-opinions after 150 steps is negligible.
+An openness threshold and disgust threshold, each having a value between 0 and 1, will be set such that the openness threshold is always less than the disgust threshold.
+
+The model's step limit is usually set to 1000, as most change in the agent's
+opinions after 1000 steps is negligible.
 

@@ -16,30 +16,28 @@ affects not only political actors, but also the interpersonal relationships
 among the rank and file citizens of a country which bolster and strengthen
 society.
 
-In this paper, we look at two societal variables that we believe may
+In my research, I look at multiple societal variables that I believe may
 significantly impact polarization in a society. The first is the density of
 social connections: in other words, the average number of social ties a member
 of that society has. The second is the degree of ``openness'' in the society:
-namely, how willing its members are to consider changing their views. We
-suspect that both of these factors play a role in determining the aggregate
+namely, how willing its members are to consider changing their views. The third is the degree of ``disgust'' in the society: namely, how easily its members are disgusted by opposing views. In addition, I look at two different influence mechanisms. I suspect that these factors play a role in determining the aggregate
 polarization of a society.
 
-In order to explore these phenomena, we created an Agent-Based Model (ABM) of
+In order to explore these phenomena, I created an Agent-Based Model (ABM) of
 heterogeneous agents in the spirit of much of the Opinion Dynamics (OD)
 literature. These agents interact with each other on a random, static social
 network and change their opinions on issues over time based on the opinions of
 their network neighbors. One novel feature of our model, termed cross-issue influence,
 is the way agents influence one another: one agent will not allow another agent to influence its
-opinion on an issue unless the two agents already have sufficient agreement on
-another (randomly chosen) issue. The justification for this is related to the
+opinion on an issue (the influence issue) unless the two agents already have sufficient agreement on
+another randomly chosen issue (the comparison issue). Additionally, the agent may potentially be repelled away from its neighbor's opinion on the influence issue if the difference in their opinions is far enough away on the comparison issue. The justification for this is related to the
 well-known observation of ``homophily'' in social psychology: people are prone
 to trust those who already agree with them on something, and hence are more
 likely to be persuaded by them on other matters.
 
-The goal of our research is to determine what micro behaviors of individuals
+The goal of my research is to determine what micro behaviors of individuals
 are sufficient to produce a change in the degree of political polarization in
 the society. As explained below, we choose to measure polarization in two
 different ways: the average similarity of an agent to its neighbors (called
-``assortativity'' in social network terminology), and the likelihood that no
-consensus will be reached on an issue (called opinion ``clustering'' in the OD
+``assortativity'' in social network terminology), and the number of distinct opinion buckets in the society. 
 literature).
