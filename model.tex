@@ -16,12 +16,12 @@ value representing how closely one of an agent's opinions must be to that of a
 potential influencer in order to accept influence; the \textbf{disgust} threshold, a value representing how far away one of an agent's opinions must be to that of a potential influencer in order to be repelled away on an issue; and the presence of agents following the cross-issue influence mechanism or the same-issue influence mechanism. (See
 Section~\ref{modelProcess}, below.)
 
-Using the model, we hope to gain general insight on the emergence of this
+Using the model, I hope to gain general insight on the emergence of this
 polarization within social networks and how different parameters affect this.
 
 \subsection{Entities, State Variables and Scales}
 
-The entities within the model are Agents, having the following attributes:
+The entities within the model are agents, having the following attributes:
 
 \begin{description}
 \item[ID] A unique ID for the agent.
@@ -29,7 +29,7 @@ The entities within the model are Agents, having the following attributes:
 having a value between 0 and 1. This represents the degree to which the agent
 ``agrees'' or ``disagrees'' with an issue, with 0.5 being neutral.
 \item[Neighbors] A subset of the other agents in the model, to whom this Agent
-has a social connection. The entire set of Agents and their social connections
+has a social connection. The entire set of agents and their social connections
 form an undirected graph (\textit{i.e.}, all social connections are
 bidirectional) and the graph is fixed throughout the simulation.
 
@@ -53,8 +53,7 @@ $I_1$ is measured.
 than or equal to the model's \textbf{openness} threshold, set $X$'s opinion on
 $I_2$ to be the average of $X$'s and $Y$'s current $I_2$ opinions.
 \item If the difference between $X$'s and $Y$'s opinion on issue $I_1$ is greater
-than or equal to the model's \textbf{disgust} threshold, set $X$'s opinion on
-$I_2$ to be the difference between $X$'s opinion and the average of $X$'s and $Y$'s current $I_2$ opinions plus $X$'s previous opinion. Note that in this case, $X$'s opinion will move away from $Y$'s on $I_2$. \\ 
+than or equal to the model's \textbf{disgust} threshold, calculate the difference between $X$'s opinion and the average of $X$ and $Y$'s current $I_2$ opinions. Then, add this quantity to $X$'s opinion on $I_2$. Note that for the cross-issue influence mechanism, $X$'s opinion will move away from $Y$'s on $I_2$. \\ 
 \end{compactenum} 
 
 For same-issue influence agents, the following sequence is executed:
@@ -68,8 +67,7 @@ $I_1$ is measured.
 than or equal to the model's \textbf{openness} threshold, set $X$'s opinion on
 $I_1$ to be the average of $X$'s and $Y$'s current $I_1$ opinions.
 \item If the difference between $X$'s and $Y$'s opinion on issue $I_1$ is greater
-than or equal to the model's \textbf{disgust} threshold, set $X$'s opinion on
-$I_1$ to be the difference between $X$'s opinion and the average of $X$'s and $Y$'s current $I_1$ opinions plus $X$'s previous opinion. Note that in this case, $X$'s opinion will move away from $Y$'s on $I_1$. 
+than or equal to the model's \textbf{disgust} threshold, calculate the difference between $X$'s opinion and the average of $X$ and $Y$'s current $I_1$ opinions. Then, add this quantity to $X$'s opinion on $I_1$. Note that for the same-issue influence mechanism, $X$'s opinion will move away from $Y$'s on $I_1$. 
 \end{compactenum}
 
 \subsection{Initialization}
