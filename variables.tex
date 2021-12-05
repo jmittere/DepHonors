@@ -36,7 +36,9 @@ result, edge probability directly corresponds to the density of social
 connections in my model.    
 
 \subsubsection{Cross-Issue Influence}
-The novel cross-issue influence mechanism that I introduced earlier is the final dependent variable in the model. The cross-issue influence variable (or CI2) has a boolean value. If the value is true, all agents in the model follow the novel CI2 mechanism. If the value is false, all agents in the model follow the same-issue influence mechanism (or I2). A more substantial explanation of the CI2 mechanism compared to I2 will be explained later on in the model section of this paper. 
+The novel cross-issue influence mechanism that I introduced earlier is the final dependent variable in the model. The cross-issue influence variable (or CI2) has a boolean value. If the value is true, all agents in the model follow the novel CI2 mechanism. If the value is false, all agents in the model follow the same-issue influence mechanism (or I2).
+
+Same-issue influence is based on the traditional bounded-confidence mechanism mentioned earlier. Cross-issue influence is an extension of this mechanism. With same-issue influence, individuals compare and recieve influence on only one issue at a time. With cross-issue influence, agents compare their opinion to their neighbors on one issue, then recieve influence on another issue that is not the same as the comparison issue. A more specific walkthrough of the CI2 mechanism compared to I2 will be explained later on in the model section of this paper. 
 
 \subsection{Dependent variables}
 
@@ -95,8 +97,10 @@ A bucket is a specific tuple of numerical opinions on the various issues. For ex
 
 It is important to note that the number of distinct opinion buckets is similar to, but not the same as, the previous dependent variable which is the number of opinion clusters. The number of distinct opinion clusters refers to how many clusters of opinions there are for a single issue. The number of distinct opinion buckets refers to the number of different tuples of opinions that exist in a society. The difference is that the number of distinct opinion clusters measures clusters on a \textit{single issue} whereas the number of distinct opinion buckets measures the clustering of \textit{all issues} in the model.
 
-For example, consider a model with three issues and four agents. If two of the agents have opinion values (0.1, 0.2, 1.0) and the other two agents have opinion values (0.7, 0.6, 0.0) then there would be two distinct opinion buckets in this model. Another important note is that at any point in simulated time, each agent is only in one bucket at a time, possibly with other agents that share the same opinion values. All agents in the same bucket agree on all the issues in the model within a threshold of \epsilon (0.05). 
- 
+For example, consider a model with three issues and four agents. If two of the agents have opinion values (0.1, 0.2, 1.0) and the other two agents have opinion values (0.7, 0.6, 0.0) then there would be two distinct opinion buckets in this model. Another important note is that at any point in simulated time, each agent is only in one bucket at a time, possibly with other agents that share the same opinion values. All agents in the same bucket agree on all the issues in the model within a threshold of $\epsilon$ (0.05). 
+
+For clarity, if a pair of agents agree on \textit{every} issue (\textit{i.e.}, they're in the same bucket), I call them \textbf{clones} (or a ``clone pair''). If a pair of agents \underline{dis}agree on every issue, I call them \textbf{anti-clones} (or an ``anti-clone pair'').
+
 I interpret this variable differently than opinion clustering. If the number of distinct opinion buckets in a society is high, then there are many different sets of opinions. With a healthy variety of diverse sets of opinions, there is a high number of distinct opinion buckets and low polarization. 
 
 When the number of distinct opinion buckets is low, then there is more polarization in the society because every individual in the society falls into one of the few number of buckets. It should be noted that it is possible for the model to converge to complete uniformity in which there is only one distinct opinion bucket. In this case, although the number of distinct opinion buckets is low, there is not polarization in the society. Consider an issue in which society has reached complete consensus. If this were the case, I wouldn't argue this indicates any polarization, obviously.    
