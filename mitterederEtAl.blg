@@ -2,20 +2,20 @@ This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: mitterederEtAl.aux
 I couldn't open style file ACM-Reference-Format.bst
----line 74 of file mitterederEtAl.aux
+---line 100 of file mitterederEtAl.aux
  : \bibstyle{ACM-Reference-Format
  :                               }
 I'm skipping whatever remains of this command
 I couldn't open database file mitterederEtAl.bib
----line 75 of file mitterederEtAl.aux
+---line 101 of file mitterederEtAl.aux
  : \bibdata{mitterederEtAl
  :                        }
 I'm skipping whatever remains of this command
 I found no database files---while reading file mitterederEtAl.aux
 I found no style file---while reading file mitterederEtAl.aux
-You've used 5 entries,
+You've used 24 entries,
             0 wiz_defined-function locations,
-            89 strings with 609 characters,
+            108 strings with 993 characters,
 and the built_in function-call counts, 0 in all, are:
 = -- 0
 > -- 0
