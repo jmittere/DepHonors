@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: mitterederEtAl.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: mitterederEtAl.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--edition ordinal word "First edition" may be too high (or improper) for conversion in epstein_growing_1996
+
+Done.
+You've used 25 entries,
+            4087 wiz_defined-function locations,
+            1009 strings with 13865 characters,
+and the built_in function-call counts, 20550 in all, are:
+= -- 1764
+> -- 492
+< -- 164
++ -- 259
+- -- 88
+* -- 1103
+:= -- 3239
+add.period$ -- 53
+call.type$ -- 25
+change.case$ -- 40
+chr.to.int$ -- 351
+cite$ -- 26
+duplicate$ -- 1438
+empty$ -- 1505
+format.name$ -- 111
+if$ -- 4710
+int.to.chr$ -- 0
+int.to.str$ -- 25
+missing$ -- 258
+newline$ -- 128
+num.names$ -- 29
+pop$ -- 536
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 4
+skip$ -- 1584
+stack$ -- 0
+substring$ -- 871
+swap$ -- 1226
+text.length$ -- 47
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 25
+warning$ -- 1
+while$ -- 90
+width$ -- 27
+write$ -- 325
+(There was 1 warning)

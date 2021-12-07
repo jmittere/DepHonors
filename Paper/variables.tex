@@ -1,0 +1,106 @@
+
+\section{Variables}
+
+In this section I define the four important independent variables whose effect
+on the model's behavior I seek to discover, and the three dependent variables I
+measure at simulation's end.
+
+\subsection{Independent variables}
+
+\subsubsection{Openness}
+
+As mentioned earlier, research shows that \textbf{openness} plays a crucial role in an
+individual's ability to relate to others, as well how easily they adopt outside
+ideas as their own. To quantify this as a model parameter, I incorporate
+openness as a threshold on a continuum from 0 to 1; this threshold is used to
+compare agent opinions during their pairwise interactions. Low levels of
+openness produce models in which agents only very rarely change their opinions
+(namely, only when encountering neighboring agents whose opinion on another
+issue is very close to their own). High levels produce models in which agents
+eagerly incorporate the opinions of others on almost every interaction.
+
+\subsubsection{Disgust}
+
+On the other side of openness, evidence\cite{cholvy_diffusion_2016} shows that negative influence can happen where individuals are repulsed by each other; thus, their opinions move farther apart. I implement disgust similarly to the openness threshold. The disgust threshold is a threshold on a continuum from 0 to 1. With low levels of the disgust threshold, individuals are more likely to be pushed away from each other because the difference in two agents opinions on any given issue is more likely to greater than the disgust threshold. When the disgust threshold is high, there will be fewer interactions that result in a repulsive or negative influence. It is important to note that the disgust threshold will never be lower than the openness threshold because it would not make sense for the practicality of the influence mechanism.   
+
+\subsubsection{Edge probability}
+
+The other parameter represented in my model is the \textit{density} of social
+connections. To implement the concept of different degrees of social
+connection, I used the Erd\"{o}s-R\'{e}nyi graph generation algorithm to
+generate a random graph of connected nodes. With the Erd\"{o}s-R\'{e}nyi graph
+generation algorithm, I can specify the \textbf{edge probability} which represents the
+probability that there will be an edge between any two given nodes. Using the
+edge probability, I can control the density of the resulting graph. As a
+result, edge probability directly corresponds to the density of social
+connections in my model.    
+
+\subsubsection{Cross-Issue Influence}
+The novel cross-issue influence mechanism that I introduced earlier is the final dependent variable in the model. The cross-issue influence variable (or CI2) has a boolean value. If the value is true, all agents in the model follow the novel CI2 mechanism. If the value is false, all agents in the model follow the same-issue influence mechanism (or I2).
+
+Same-issue influence is based on the traditional bounded-confidence mechanism mentioned earlier. Cross-issue influence is an extension of this mechanism. With same-issue influence, individuals compare and receive influence on only one issue at a time. With cross-issue influence, agents compare their opinion to their neighbors on one issue, then receive influence on another issue that is not the same as the comparison issue. A more specific walk-through of the CI2 mechanism compared to I2 will be explained later on in the model section of this paper. 
+
+\subsection{Dependent variables}
+
+\subsubsection{Graph assortativity}
+
+One way I measure the simulated society's polarization is through the
+resulting network's ``assortative mixing,'' or simply graph
+\textbf{assortativity}. This represents the degree to which an agent's opinions
+will have similar values to those of its network neighbors, on average.
+
+The assortativity of a network has a value between $-1$ and 1, where 1
+indicates ``perfect assortative mixing'' -- \textit{i.e.}, a situation where
+every agent's opinions are identical to each of its graph neighbors'. An
+assortativity of 0 indicates that the agents' social connections have no
+correlation at all with their opinion values: having a social tie with another
+agent does not mean an agent is any more (or less) likely to have opinions
+similar to that agent. This will be approximately true when the model is
+initialized and before the iterative process begins. (Negative assortativity
+values correspond to networks in which an agent is \textit{less} likely to
+agree with its network neighbors than with agents in general.)
+
+Assortativity is thus a way to measure the extent to which agents become
+surrounded by (only) like-minded agents, and are therefore no longer exposed to
+alternative points of view. Since I need to obtain the graph's assortativity
+with respect to \textit{multiple} attributes (\textit{i.e.}, the opinions an
+agent has on all of the issues), I simply compute the network's assortativity
+for each issue separately (as defined in \cite{newman_mixing_2003}, p.5) and
+average it over all the issues.
+
+\subsubsection{Opinion clustering}
+
+The second dependent variable of my model is opinion \textbf{clustering}. This
+measures how often the opinions that agents have on a given issue fail to
+converge to a uniform value, instead remaining bifurcated among two or more
+values in perpetuity. Each group of agents who, at simulation's end, have the
+same opinion on an issue (within some small tolerance $\epsilon$) are termed an
+``opinion cluster'' (a term used by \cite{fotakis_opinion_2016}) on that issue.
+
+For clarity, I refer to any issue on which all agent opinions eventually
+converge to the same value as a ``\textbf{uniform issue},'' and any issue that
+instead produces opinion clusters as a ``\textbf{clustered issue}.''
+
+One challenge is defining what qualifies as an clustered issue, given that
+agent opinions are represented as real numbers that may asymptotically converge
+to, but never actually reach, the same value. I use the following mechanism.
+To calculate the number of clusters for an issue, I add agents to a cluster
+after every step of the model. If the absolute value of the difference between
+an agent's opinion and the average opinion of a preexisting cluster is within
+a threshold (0.05), the agent is added to that cluster. If this is not the
+case, the agent is added to a new cluster in which it is the first occupant.
+
+\subsubsection{Number of Distinct Opinion Buckets}
+
+The third and final dependent variable in the model is used to quantify the issue alignment in a society. This variable I term the number of distinct opinion \textbf{buckets}.
+A bucket is a specific tuple of numerical opinions on the various issues. For example, a bucket could have the values (0.4, 1.0, 0.6) where the opinion values for issues one, two, and three are 0.4, 1.0, and 0.6 respectively. 
+
+It is important to note that the number of distinct opinion buckets is similar to, but not the same as, the previous dependent variable which is the number of opinion clusters. The number of distinct opinion clusters refers to how many clusters of opinions there are for a single issue. The number of distinct opinion buckets refers to the number of different tuples of opinions that exist in a society. The difference is that the number of distinct opinion clusters measures clusters on a \textit{single issue} whereas the number of distinct opinion buckets measures the clustering of \textit{all issues} in the model.
+
+For example, consider a model with three issues and four agents. If two of the agents have opinion values (0.1, 0.2, 1.0) and the other two agents have opinion values (0.7, 0.6, 0.0) then there would be two distinct opinion buckets in this model. Another important note is that at any point in simulated time, each agent is only in one bucket at a time, possibly with other agents that share the same opinion values. All agents in the same bucket agree on all the issues in the model within a threshold of $\epsilon$ (0.05). 
+
+For clarity, if a pair of agents agree on \textit{every} issue (\textit{i.e.}, they're in the same bucket), I call them \textbf{clones} (or a ``clone pair''). If a pair of agents \underline{dis}agree on every issue, I call them \textbf{anti-clones} (or an ``anti-clone pair'').
+
+I interpret this variable differently than opinion clustering. If the number of distinct opinion buckets in a society is high, then there are many different sets of opinions. With a healthy variety of diverse sets of opinions, there is a high number of distinct opinion buckets and low polarization. 
+
+When the number of distinct opinion buckets is low, then there is more polarization in the society because every individual in the society falls into one of the few number of buckets. It should be noted that it is possible for the model to converge to complete uniformity in which there is only one distinct opinion bucket. In this case, although the number of distinct opinion buckets is low, there is not polarization in the society. Consider an issue in which society has reached complete consensus. If this were the case, I wouldn't argue this indicates any polarization, obviously.    

@@ -1,0 +1,114 @@
+\section{Related work}
+
+\subsection{Opinion Dynamics}
+
+Opinion Dynamics models seek to reproduce the phenomenon of individual agents
+forming opinions over time via mutual influence. They allow the researcher to
+explore the macro-level patterns that may arise in a society from a set
+of simple influence rules defined on the micro-level. For instance, the Binary
+Voter Model (BVM), the original and perhaps most influential OD model
+(\cite{clifford_model_1973, holley_ergodic_1975}), features a set of
+interacting agents, each of which holds a binary opinion. The single influence
+rule is that agents periodically change their opinion to match one of their
+influencers, chosen at random. Among other things, the model demonstrates that
+such a system will always eventually reach uniformity of opinion.
+
+Many researchers (\textit{e.g.}, \cite{ghaderi_opinion_2012,
+weisbuch_interacting_2001}) have expanded this idea to model continuous, rather
+than discrete, opinions: these are typically expressed as real numbers between
+0 and 1. In addition to better capturing the nuance of real-life viewpoints
+(which are not usually completely black or white on any issue), continuous
+opinions lead naturally to incorporating a form of
+\textbf{homophily}\cite{mcpherson_birds_2001} into the model: agents will only
+choose to be influenced by agents whose existing opinion is already close to
+their own. Termed ``\textbf{bounded confidence}'' (BC) by
+\cite{hegselmann_opinion_2002}, this feature can result in non-convergence to
+uniformity depending on the value of the threshold agents use to gate
+influence.\cite{hegselmann_opinion_2002, deffuant_mixing_2000,
+tsang_opinion_2014} The term ``\textbf{clustering}'' (or ``opinion
+clustering'') has been used to describe the resulting equilibrium reached by
+such models, in which subsets of the agents each converge on a different
+opinion value and are henceforth no longer persuadable by other agents.
+
+A smaller number of studies have considered ``\textbf{multidimensional
+opinions},'' in which each agent maintains a separate opinion on each of
+several different ``issues'' rather than on just one.\footnote{This is to be
+carefully distinguished from ``\textbf{opinion vectors},'' which represent an
+agent's degree of support for each of several alternatives on the \textit{same}
+issue. (See, \textit{e.g.}, \cite{sirbu_opinion_2013}.) Unlike multidimensional
+opinions, these opinion vectors are often restricted to be members of a
+probability simplex.\\\indent To be concrete about the difference, an agent in
+a model with multidimensional opinions might ave a value of .8 for the
+``pro-gun control'' issue, .9 for the ``raise the minimum wage'' issue, and .4
+for the ``restrict fracking'' issue. By contrast, an agent in a model with
+opinion vectors might have a value of .2 for the ``raise taxes to fund
+infrastructure'' alternative, .7 for the ``cut military spending to fund
+infrastructure'' alternative, and .1 for the ``increase IRS audits to fund
+infrastructure'' alternative, all possible solutions to the single ``how to
+fund infrastructure'' issue. In the latter case, the options are considered
+mutually exclusive and must sum to 1 for any agent.\\\indent (Of course, the
+specific real-world examples here are only for illustration; OD models
+represent ``issues'' and the ``opinions'' about them completely abstractly.)}
+The opinions in a multidimensional setting have been modeled as discrete
+(\cite{deffuant_mixing_2000}) or even as boolean variables combined in
+arbitrary logic formulas (\cite{van_den_herik_modelling_2019,
+cholvy_diffusion_2016}). Oddly, modeling multidimensional opinions as an array
+of continuous values is rarely seen. One purpose of using multidimensional
+opinions could be to see how an agent's opinions on different issues interact
+with one another. This is explored by the boolean expressions in
+\cite{van_den_herik_modelling_2019} and \cite{cholvy_diffusion_2016}; in
+\cite{deffuant_mixing_2000} the multidimensional opinion for each agent is
+instead used merely as an element in a vector space whose (Hamming) distance
+from other agents' multidimensional opinions can be computed and compared to a
+BC threshold.
+
+With respect to these previous efforts, my model resembles the BVM but gives
+the agents continuous, multidimensional opinions. My model also implements BC, but in
+a different way than models like \cite{tsang_opinion_2014} do: before accepting
+the influence of a fellow agent on an issue, an agent in my model must already
+be close in opinion to that agent on a \textit{different} issue. Additionally, agents may be repelled away from each other on a different issue if the difference in their opinions is large enough on another seperate issue. This mechanism I refer to as  
+cross-issue influence is meant to mimic a phenomenon of human behavior: if I learn that your viewpoint on
+issue A is close to my own, homophily suggests that I will trust you, and I
+will therefore be willing to consider your viewpoint on issue B. If I think you do not have a reasonable opinion on issue A, I will move away from you on issue B. To my
+knowledge, this mechanism of agent influence has not been previously explored.
+
+\subsection{Polarization}
+
+Polarization can mean different things to different people; I therefore begin
+by briefly establishing a dictionary of terms that I will refer back to
+throughout this paper.
+
+Arguably the most familiar manifestation of polarization -- which I have termed
+``\textbf{diametricity}'' -- is when a group experiences opinions shifting away
+from common ground to polar sides, leaving nobody `in the middle' on a specific
+issue. Although I do believe that this is a type of polarization that may be occurring, I did not study this flavor of polarization in my research. 
+
+In future research, I hope to study this type of polarization, but I wanted to focus on the types of polarization that I believe pose the greatest threat to society. In my opinion, the majority of American's views are not more diametric than they used to be. Even though certain groups of the population are extreme and pose a threat to democratic processes, the types of polarization that I feel are the most dangerous are described below. 
+
+I use the graph theory term \textbf{assortativity} to represent a second type
+of polarization, which is rooted in the tendency that people have to form
+connections with people who have similar views. This idea is supported by
+\cite{klinkner_red_2005} which focuses on physical proximity breeding
+connections, as well as \cite{cholvy_diffusion_2016} which states that we are
+more likely to form connections with those that we already are in agreement
+with on another issue. The well-known concept of homophily comes into play
+here, as studied in \cite{davies_twin_2017} and \cite{taylor_exploring_2018}.
+Assortativity is a way to quantify the presence of ``echo chambers'' in a
+society, in which people are exposed mostly (or solely) to opinions that
+confirm what they already
+believe.\cite{dandekar_biased_2013,flaxman_filter_2016}
+
+A third form of polarization is one that can be measured as follows:
+how often do opinions on issues result in \textbf{clustering}? For
+example, if all individuals had the same belief, there would be one opinion
+cluster. However, in a polarized society, there are clusters of opinions for any given issue. In this way, higher clustering in a society represents when individuals are entrenched and no longer willing to change their opinion on a given issue. The mechanism that I use in this paper to calculate the number of opinion clusters will be explained later.
+
+Finally, the last form of polarization that I study in this paper is \textbf{issue alignment}. I define issue alignment as the tendency for people who agree on one issue to also agree on other (unrelated) issues. For example, consider the issues of vaccine mandates, abortion, and gun control. It seems clear to me that these issues are unrelated, yet if I were to know one person's opinion on one of these issues, I believe that I could guess their opinions on the other issues to a high degree of accuracy. Simply, issues that should not be correlated with each other seem to be connected in some way. 
+
+If people generally adhere to an entire suite of opinions, I term that society ``issue aligned'', and claim this is an indication of polarization. 
+
+This phenomenon of issue alignment is not one I have seen studied in the opinion dynamics literature which is why I believe it is so important to understand. I have a few theories as to how issue alignment develops in a society. First, it is possible to me that there is some deep underlying principle to people's value systems that connects seemingly unconnected issues. For example, if an individual believes in personal freedom over everything else, then maybe this influences their decisions on a wide range of issues such as gun control, abortion, and vaccine mandates. However, I do not believe that this is the reason issue alignment occurs. 
+
+Another possible explanation for issue alignment is media outlets. Perhaps a small number of popular media outlets each articulates a set of opinions on various issues. If individuals only hear from their media outlet that they subscribe to, then issue alignment could occur.
+
+A third explanation for issue alignment is that individuals following the well-proven principle of homophily are influenced by their social connections across issues. If they are friends, then homophily and common sense would suggest that agreeing on one issue makes these individuals more likely to be influenced towards each other on another issue. As a result, the individuals develop similar views on issues; thus, resulting in groups that have similar viewpoints on multiple issues that are unrelated. The societal result of this cross-issue influence mechanism is issue alignment.   
