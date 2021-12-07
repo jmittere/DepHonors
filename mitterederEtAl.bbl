@@ -1,0 +1,445 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{24}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Battistella and Cholvy}{Battistella and
+  Cholvy}{2019}]%
+        {van_den_herik_modelling_2019}
+\bibfield{author}{\bibinfo{person}{Enzo Battistella} {and}
+  \bibinfo{person}{Laurence Cholvy}.} \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Modelling and {Simulating} {Extreme} {Opinion}
+  {Diffusion}}.
+\newblock In \bibinfo{booktitle}{\emph{Agents and {Artificial}
+  {Intelligence}}}, \bibfield{editor}{\bibinfo{person}{Jaap van~den Herik}
+  {and} \bibinfo{person}{Ana~Paula Rocha}} (Eds.).
+  Vol.~\bibinfo{volume}{11352}. \bibinfo{publisher}{Springer International
+  Publishing}, \bibinfo{address}{Cham}, \bibinfo{pages}{79--104}.
+\newblock
+\showISBNx{978-3-030-05452-6 978-3-030-05453-3}
+\urldef\tempurl%
+\url{https://doi.org/10.1007/978-3-030-05453-3_5}
+\showDOI{\tempurl}
+\newblock
+\shownote{Series Title: Lecture Notes in Computer Science.}
+
+
+\bibitem[\protect\citeauthoryear{Cholvy}{Cholvy}{2016}]%
+        {cholvy_diffusion_2016}
+\bibfield{author}{\bibinfo{person}{Laurence Cholvy}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Diffusion of {Opinion} and {Influence}}. In
+  \bibinfo{booktitle}{\emph{Scalable {Uncertainty} {Management}}}
+  \emph{(\bibinfo{series}{Lecture {Notes} in {Computer} {Science}})},
+  \bibfield{editor}{\bibinfo{person}{Steven Schockaert} {and}
+  \bibinfo{person}{Pierre Senellart}} (Eds.). \bibinfo{publisher}{Springer
+  International Publishing}, \bibinfo{address}{Cham},
+  \bibinfo{pages}{112--125}.
+\newblock
+\showISBNx{978-3-319-45856-4}
+\urldef\tempurl%
+\url{https://doi.org/10.1007/978-3-319-45856-4_8}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Clifford and Sudbury}{Clifford and
+  Sudbury}{1973}]%
+        {clifford_model_1973}
+\bibfield{author}{\bibinfo{person}{Peter Clifford} {and} \bibinfo{person}{Aidan
+  Sudbury}.} \bibinfo{year}{1973}\natexlab{}.
+\newblock \showarticletitle{A {Model} for {Spatial} {Conflict}}.
+\newblock \bibinfo{journal}{\emph{Biometrika}} \bibinfo{volume}{60},
+  \bibinfo{number}{3} (\bibinfo{year}{1973}), \bibinfo{pages}{581--588}.
+\newblock
+\showISSN{0006-3444}
+\urldef\tempurl%
+\url{https://doi.org/10.2307/2335008}
+\showDOI{\tempurl}
+\newblock
+\shownote{Publisher: [Oxford University Press, Biometrika Trust].}
+
+
+\bibitem[\protect\citeauthoryear{Dandekar, Goel, and Lee}{Dandekar
+  et~al\mbox{.}}{2013}]%
+        {dandekar_biased_2013}
+\bibfield{author}{\bibinfo{person}{Pranav Dandekar}, \bibinfo{person}{Ashish
+  Goel}, {and} \bibinfo{person}{David~T. Lee}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Biased assimilation, homophily, and the dynamics of
+  polarization}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the National Academy of
+  Sciences}} \bibinfo{volume}{110}, \bibinfo{number}{15}
+  (\bibinfo{year}{2013}), \bibinfo{pages}{5791--5796}.
+\newblock
+\newblock
+\shownote{Publisher: National Acad Sciences.}
+
+
+\bibitem[\protect\citeauthoryear{Davies}{Davies}{2017}]%
+        {davies_twin_2017}
+\bibfield{author}{\bibinfo{person}{Stephen Davies}.}
+  \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{The twin impact of homophily and accessibility on
+  ideological polarization}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  2017 {International} {Conference} of {The} {Computational} {Social} {Science}
+  {Society} of the {Americas}}}. \bibinfo{pages}{1--8}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Dean}{Dean}{2021}]%
+        {dean_how_2021}
+\bibfield{author}{\bibinfo{person}{Brian Dean}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \bibinfo{title}{How {Many} {People} {Use} {Social} {Media} in 2021?
+  (65+ {Statistics})}.
+\newblock
+\newblock
+\urldef\tempurl%
+\url{https://backlinko.com/social-media-users}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Deffuant, Neau, Amblard, and
+  Weisbuch}{Deffuant et~al\mbox{.}}{2000}]%
+        {deffuant_mixing_2000}
+\bibfield{author}{\bibinfo{person}{Guillaume Deffuant}, \bibinfo{person}{David
+  Neau}, \bibinfo{person}{Frederic Amblard}, {and} \bibinfo{person}{Gerard
+  Weisbuch}.} \bibinfo{year}{2000}\natexlab{}.
+\newblock \showarticletitle{Mixing beliefs among interacting agents}.
+\newblock \bibinfo{journal}{\emph{Advances in Complex Systems}}
+  \bibinfo{volume}{3}, \bibinfo{number}{01n04} (\bibinfo{year}{2000}),
+  \bibinfo{pages}{87--98}.
+\newblock
+\urldef\tempurl%
+\url{http://www.worldscientific.com/doi/abs/10.1142/S0219525900000078}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{DeYoung, Peterson, and Higgins}{DeYoung
+  et~al\mbox{.}}{2005}]%
+        {deyoung_sources_2005}
+\bibfield{author}{\bibinfo{person}{Colin~G. DeYoung},
+  \bibinfo{person}{Jordan~B. Peterson}, {and} \bibinfo{person}{Daniel~M.
+  Higgins}.} \bibinfo{year}{2005}\natexlab{}.
+\newblock \showarticletitle{Sources of {Openness}/{Intellect}: {Cognitive} and
+  {Neuropsychological} {Correlates} of the {Fifth} {Factor} of {Personality}}.
+\newblock \bibinfo{journal}{\emph{Journal of Personality}}
+  \bibinfo{volume}{73}, \bibinfo{number}{4} (\bibinfo{date}{Aug.}
+  \bibinfo{year}{2005}), \bibinfo{pages}{825--858}.
+\newblock
+\showISSN{0022-3506, 1467-6494}
+\urldef\tempurl%
+\url{https://doi.org/10.1111/j.1467-6494.2005.00330.x}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Erdös and Rényi}{Erdös and Rényi}{1959}]%
+        {erdos_random_1959}
+\bibfield{author}{\bibinfo{person}{Paul Erdös} {and} \bibinfo{person}{Alfréd
+  Rényi}.} \bibinfo{year}{1959}\natexlab{}.
+\newblock \showarticletitle{On random graphs, {I}}.
+\newblock \bibinfo{journal}{\emph{Publicationes Mathematicae (Debrecen)}}
+  \bibinfo{volume}{6} (\bibinfo{year}{1959}), \bibinfo{pages}{290--297}.
+\newblock
+\urldef\tempurl%
+\url{http://www.citeulike.org/group/3509/article/4012374}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Flaxman, Goel, and Rao}{Flaxman
+  et~al\mbox{.}}{2016}]%
+        {flaxman_filter_2016}
+\bibfield{author}{\bibinfo{person}{Seth Flaxman}, \bibinfo{person}{Sharad
+  Goel}, {and} \bibinfo{person}{Justin~M. Rao}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Filter bubbles, echo chambers, and online news
+  consumption}.
+\newblock \bibinfo{journal}{\emph{Public opinion quarterly}}
+  \bibinfo{volume}{80}, \bibinfo{number}{S1} (\bibinfo{year}{2016}),
+  \bibinfo{pages}{298--320}.
+\newblock
+\newblock
+\shownote{Publisher: Oxford University Press.}
+
+
+\bibitem[\protect\citeauthoryear{Fotakis, Palyvos-Giannas, and
+  Skoulakis}{Fotakis et~al\mbox{.}}{2016}]%
+        {fotakis_opinion_2016}
+\bibfield{author}{\bibinfo{person}{Dimitris Fotakis}, \bibinfo{person}{Dimitris
+  Palyvos-Giannas}, {and} \bibinfo{person}{Stratis Skoulakis}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Opinion {Dynamics} with {Local} {Interactions}}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the Twenty-Fifth International
+  Joint Conference on Artificial Intelligence (IJCAI-16)}}
+  (\bibinfo{year}{2016}), \bibinfo{pages}{7}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Furnham and Cheng}{Furnham and Cheng}{2016}]%
+        {furnham_childhood_2016}
+\bibfield{author}{\bibinfo{person}{Adrian Furnham} {and} \bibinfo{person}{Helen
+  Cheng}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Childhood intelligence predicts adult trait
+  openness: {Psychological} and demographic indicators}.
+\newblock \bibinfo{journal}{\emph{Journal of Individual Differences}}
+  \bibinfo{volume}{37}, \bibinfo{number}{2} (\bibinfo{year}{2016}),
+  \bibinfo{pages}{105--111}.
+\newblock
+\showISSN{1614-0001}
+\urldef\tempurl%
+\url{https://doi.org/10.1027/1614-0001/a000194}
+\showDOI{\tempurl}
+\newblock
+\shownote{Publisher: Hogrefe Publishing.}
+
+
+\bibitem[\protect\citeauthoryear{Ghaderi and Srikant}{Ghaderi and
+  Srikant}{2012}]%
+        {ghaderi_opinion_2012}
+\bibfield{author}{\bibinfo{person}{Javad Ghaderi} {and} \bibinfo{person}{R.
+  Srikant}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{Opinion {Dynamics} in {Social} {Networks}: {A}
+  {Local} {Interaction} {Game} with {Stubborn} {Agents}}.
+\newblock \bibinfo{journal}{\emph{arXiv:1208.5076 [cs]}}
+  (\bibinfo{year}{2012}).
+\newblock
+\urldef\tempurl%
+\url{http://arxiv.org/abs/1208.5076}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{arXiv: 1208.5076.}
+
+
+\bibitem[\protect\citeauthoryear{Grimm, Berger, Bastiansen, Eliassen, Ginot,
+  Giske, Goss-Custard, Grand, Heinz, Huse, Huth, Jepsen, Jørgensen, Mooij,
+  Müller, Pe’er, Piou, Railsback, Robbins, Robbins, Rossmanith, Rüger,
+  Strand, Souissi, Stillman, Vabø, Visser, and DeAngelis}{Grimm
+  et~al\mbox{.}}{2006}]%
+        {grimm_standard_2006}
+\bibfield{author}{\bibinfo{person}{Volker Grimm}, \bibinfo{person}{Uta Berger},
+  \bibinfo{person}{Finn Bastiansen}, \bibinfo{person}{Sigrunn Eliassen},
+  \bibinfo{person}{Vincent Ginot}, \bibinfo{person}{Jarl Giske},
+  \bibinfo{person}{John Goss-Custard}, \bibinfo{person}{Tamara Grand},
+  \bibinfo{person}{Simone~K. Heinz}, \bibinfo{person}{Geir Huse},
+  \bibinfo{person}{Andreas Huth}, \bibinfo{person}{Jane~U. Jepsen},
+  \bibinfo{person}{Christian Jørgensen}, \bibinfo{person}{Wolf~M. Mooij},
+  \bibinfo{person}{Birgit Müller}, \bibinfo{person}{Guy Pe’er},
+  \bibinfo{person}{Cyril Piou}, \bibinfo{person}{Steven~F. Railsback},
+  \bibinfo{person}{Andrew~M. Robbins}, \bibinfo{person}{Martha~M. Robbins},
+  \bibinfo{person}{Eva Rossmanith}, \bibinfo{person}{Nadja Rüger},
+  \bibinfo{person}{Espen Strand}, \bibinfo{person}{Sami Souissi},
+  \bibinfo{person}{Richard~A. Stillman}, \bibinfo{person}{Rune Vabø},
+  \bibinfo{person}{Ute Visser}, {and} \bibinfo{person}{Donald~L. DeAngelis}.}
+  \bibinfo{year}{2006}\natexlab{}.
+\newblock \showarticletitle{A standard protocol for describing individual-based
+  and agent-based models}.
+\newblock \bibinfo{journal}{\emph{Ecological Modelling}} \bibinfo{volume}{198},
+  \bibinfo{number}{1–2} (\bibinfo{year}{2006}), \bibinfo{pages}{115--126}.
+\newblock
+\showISSN{0304-3800}
+\urldef\tempurl%
+\url{https://doi.org/10.1016/j.ecolmodel.2006.04.023}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Hegselmann and Krause}{Hegselmann and
+  Krause}{2002}]%
+        {hegselmann_opinion_2002}
+\bibfield{author}{\bibinfo{person}{Rainer Hegselmann} {and}
+  \bibinfo{person}{Ulrich Krause}.} \bibinfo{year}{2002}\natexlab{}.
+\newblock \showarticletitle{Opinion dynamics and bounded confidence models,
+  analysis, and simulation}.
+\newblock \bibinfo{journal}{\emph{Journal of Artificial Societies and Social
+  Simulation}} \bibinfo{volume}{5}, \bibinfo{number}{3} (\bibinfo{year}{2002}).
+\newblock
+\urldef\tempurl%
+\url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.454.3597&rep=rep1&type=pdf}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Holley and Liggett}{Holley and
+  Liggett}{1975}]%
+        {holley_ergodic_1975}
+\bibfield{author}{\bibinfo{person}{Richard~A. Holley} {and}
+  \bibinfo{person}{Thomas~M. Liggett}.} \bibinfo{year}{1975}\natexlab{}.
+\newblock \showarticletitle{Ergodic {Theorems} for {Weakly} {Interacting}
+  {Infinite} {Systems} and the {Voter} {Model}}.
+\newblock \bibinfo{journal}{\emph{The Annals of Probability}}
+  \bibinfo{volume}{3}, \bibinfo{number}{4} (\bibinfo{year}{1975}),
+  \bibinfo{pages}{643--663}.
+\newblock
+\showISSN{0091-1798, 2168-894X}
+\urldef\tempurl%
+\url{https://doi.org/10.1214/aop/1176996306}
+\showDOI{\tempurl}
+\newblock
+\shownote{Publisher: Institute of Mathematical Statistics.}
+
+
+\bibitem[\protect\citeauthoryear{John and Srivastava}{John and
+  Srivastava}{1999}]%
+        {john_big-five_1999}
+\bibfield{author}{\bibinfo{person}{Oliver~P. John} {and}
+  \bibinfo{person}{Sanjay Srivastava}.} \bibinfo{year}{1999}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{The {Big}-{Five} trait taxonomy: {History},
+  measurement, and theoretical perspectives}}. Vol.~\bibinfo{volume}{2}.
+\newblock \bibinfo{publisher}{University of California Berkeley}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Klinkner and Hapanowicz}{Klinkner and
+  Hapanowicz}{2005}]%
+        {klinkner_red_2005}
+\bibfield{author}{\bibinfo{person}{Philip~A. Klinkner} {and}
+  \bibinfo{person}{Ann Hapanowicz}.} \bibinfo{year}{2005}\natexlab{}.
+\newblock \showarticletitle{Red and {Blue} {Déjà} {Vu}: {Measuring}
+  {Political} {Polarization} in the 2004 {Election}}.
+\newblock \bibinfo{journal}{\emph{The forum : a journal of applied research in
+  contemporary politics}} \bibinfo{volume}{3}, \bibinfo{number}{2}
+  (\bibinfo{year}{2005}).
+\newblock
+\showISSN{1540-8884}
+\urldef\tempurl%
+\url{https://doi.org/10.2202/1540-8884.1079}
+\showDOI{\tempurl}
+\newblock
+\shownote{Publisher: Walter de Gruyter GmbH \& CoKG.}
+
+
+\bibitem[\protect\citeauthoryear{McPherson, Smith-Lovin, and Cook}{McPherson
+  et~al\mbox{.}}{2001}]%
+        {mcpherson_birds_2001}
+\bibfield{author}{\bibinfo{person}{M. McPherson}, \bibinfo{person}{L.
+  Smith-Lovin}, {and} \bibinfo{person}{J.~M. Cook}.}
+  \bibinfo{year}{2001}\natexlab{}.
+\newblock \showarticletitle{Birds of a feather: {Homophily} in social
+  networks}.
+\newblock \bibinfo{journal}{\emph{Annual review of sociology}}
+  (\bibinfo{year}{2001}), \bibinfo{pages}{415--444}.
+\newblock
+\urldef\tempurl%
+\url{http://www.jstor.org/stable/10.2307/2678628}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Newman}{Newman}{2003}]%
+        {newman_mixing_2003}
+\bibfield{author}{\bibinfo{person}{Mark~EJ Newman}.}
+  \bibinfo{year}{2003}\natexlab{}.
+\newblock \showarticletitle{Mixing patterns in networks}.
+\newblock \bibinfo{journal}{\emph{Physical review E}} \bibinfo{volume}{67},
+  \bibinfo{number}{2} (\bibinfo{year}{2003}), \bibinfo{pages}{026126}.
+\newblock
+\newblock
+\shownote{Publisher: APS.}
+
+
+\bibitem[\protect\citeauthoryear{Sîrbu, Loreto, Servedio, and Tria}{Sîrbu
+  et~al\mbox{.}}{2013}]%
+        {sirbu_opinion_2013}
+\bibfield{author}{\bibinfo{person}{Alina Sîrbu}, \bibinfo{person}{Vittorio
+  Loreto}, \bibinfo{person}{Vito Servedio}, {and} \bibinfo{person}{Francesca
+  Tria}.} \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{Opinion {Dynamics} with {Disagreement} and
+  {Modulated} {Information}}.
+\newblock \bibinfo{journal}{\emph{Journal of Statistical Physics}}
+  \bibinfo{volume}{151}, \bibinfo{number}{1/2} (\bibinfo{date}{April}
+  \bibinfo{year}{2013}), \bibinfo{pages}{218--237}.
+\newblock
+\showISSN{00224715}
+\urldef\tempurl%
+\url{https://doi.org/10.1007/s10955-013-0724-x}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Taylor, Mantzaris, and Garibay}{Taylor
+  et~al\mbox{.}}{2018}]%
+        {taylor_exploring_2018}
+\bibfield{author}{\bibinfo{person}{Cameron~E. Taylor},
+  \bibinfo{person}{Alexander~V. Mantzaris}, {and} \bibinfo{person}{Ivan
+  Garibay}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Exploring how homophily and accessibility can
+  facilitate polarization in social networks}.
+\newblock \bibinfo{journal}{\emph{Information}} \bibinfo{volume}{9},
+  \bibinfo{number}{12} (\bibinfo{year}{2018}), \bibinfo{pages}{325}.
+\newblock
+\newblock
+\shownote{Publisher: Multidisciplinary Digital Publishing Institute.}
+
+
+\bibitem[\protect\citeauthoryear{Tsang and Larson}{Tsang and Larson}{2014}]%
+        {tsang_opinion_2014}
+\bibfield{author}{\bibinfo{person}{Alan Tsang} {and} \bibinfo{person}{Kate
+  Larson}.} \bibinfo{year}{2014}\natexlab{}.
+\newblock \showarticletitle{Opinion dynamics of skeptical agents}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2014 international conference on
+  {Autonomous} agents and multi-agent systems}}.
+  \bibinfo{publisher}{International Foundation for Autonomous Agents and
+  Multiagent Systems}, \bibinfo{pages}{277--284}.
+\newblock
+\urldef\tempurl%
+\url{http://dl.acm.org/citation.cfm?id=2615778}
+\showURL{%
+\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Weisbuch, Deffuant, Amblard, and
+  Nadal}{Weisbuch et~al\mbox{.}}{2001}]%
+        {weisbuch_interacting_2001}
+\bibfield{author}{\bibinfo{person}{Gerard Weisbuch}, \bibinfo{person}{Guillaume
+  Deffuant}, \bibinfo{person}{Frederic Amblard}, {and}
+  \bibinfo{person}{Jean~Pierre Nadal}.} \bibinfo{year}{2001}\natexlab{}.
+\newblock \showarticletitle{Interacting {Agents} and {Continuous} {Opinions}
+  {Dynamics}}.
+\newblock \bibinfo{journal}{\emph{arXiv:cond-mat/0111494}}
+  (\bibinfo{year}{2001}).
+\newblock
+\urldef\tempurl%
+\url{http://arxiv.org/abs/cond-mat/0111494}
+\showURL{%
+\tempurl}
+\newblock
+\shownote{arXiv: cond-mat/0111494.}
+
+
+\end{thebibliography}

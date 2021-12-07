@@ -1,57 +1,66 @@
 This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: mitterederEtAl.aux
-I couldn't open style file ACM-Reference-Format.bst
----line 90 of file mitterederEtAl.aux
- : \bibstyle{ACM-Reference-Format
- :                               }
-I'm skipping whatever remains of this command
-I couldn't open database file mitterederEtAl.bib
----line 91 of file mitterederEtAl.aux
- : \bibdata{mitterederEtAl
- :                        }
-I'm skipping whatever remains of this command
-I found no database files---while reading file mitterederEtAl.aux
-I found no style file---while reading file mitterederEtAl.aux
+The style file: ACM-Reference-Format.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: mitterederEtAl.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty publisher in davies_twin_2017
+Warning--empty address in davies_twin_2017
+Warning--no number and no volume in fotakis_opinion_2016
+Warning--no number and no volume in ghaderi_opinion_2012
+Warning--page numbers missing in both pages and numpages fields in ghaderi_opinion_2012
+Warning--page numbers missing in both pages and numpages fields in hegselmann_opinion_2002
+Warning--empty address in john_big-five_1999
+Warning--page numbers missing in both pages and numpages fields in klinkner_red_2005
+Warning--no number and no volume in mcpherson_birds_2001
+Warning--empty address in tsang_opinion_2014
+Warning--no number and no volume in weisbuch_interacting_2001
+Warning--page numbers missing in both pages and numpages fields in weisbuch_interacting_2001
 You've used 24 entries,
-            0 wiz_defined-function locations,
-            108 strings with 993 characters,
-and the built_in function-call counts, 0 in all, are:
-= -- 0
-> -- 0
+            5719 wiz_defined-function locations,
+            1485 strings with 21146 characters,
+and the built_in function-call counts, 30658 in all, are:
+= -- 4368
+> -- 1194
 < -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 0
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 0
-format.name$ -- 0
-if$ -- 0
-int.to.chr$ -- 0
-int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 0
-num.names$ -- 0
-pop$ -- 0
-preamble$ -- 0
-purify$ -- 0
++ -- 404
+- -- 428
+* -- 2250
+:= -- 3092
+add.period$ -- 135
+call.type$ -- 24
+change.case$ -- 178
+chr.to.int$ -- 24
+cite$ -- 36
+duplicate$ -- 2425
+empty$ -- 1711
+format.name$ -- 508
+if$ -- 7565
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 90
+newline$ -- 319
+num.names$ -- 196
+pop$ -- 812
+preamble$ -- 1
+purify$ -- 394
 quote$ -- 0
-skip$ -- 0
+skip$ -- 836
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 2195
+swap$ -- 265
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 0
-while$ -- 0
+type$ -- 453
+warning$ -- 12
+while$ -- 202
 width$ -- 0
-write$ -- 0
-(There were 4 error messages)
+write$ -- 538
+(There were 12 warnings)
