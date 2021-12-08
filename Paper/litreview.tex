@@ -10,13 +10,12 @@ Voter Model (BVM), the original and perhaps most influential OD model
 (\cite{clifford_model_1973, holley_ergodic_1975}), features a set of
 interacting agents, each of which holds a binary opinion. The single influence
 rule is that agents periodically change their opinion to match one of their
-influencers, chosen at random. Among other things, the model demonstrates that
-such a system will always eventually reach uniformity of opinion.
+influencers, chosen at random. My model takes inspiration from this mechanism in that for each simulated time step of the model, every agent will take turns receiving influence from one randomly chosen neighboring agent. 
 
 Many researchers (\textit{e.g.}, \cite{ghaderi_opinion_2012,
 weisbuch_interacting_2001}) have expanded this idea to model continuous, rather
 than discrete, opinions: these are typically expressed as real numbers between
-0 and 1. In addition to better capturing the nuance of real-life viewpoints
+0 and 1. I will also take inspiration from these models to include continuous opinions in my model. In addition to better capturing the nuance of real-life viewpoints
 (which are not usually completely black or white on any issue), continuous
 opinions lead naturally to incorporating a form of
 \textbf{homophily}\cite{mcpherson_birds_2001} into the model: agents will only
@@ -60,13 +59,15 @@ with one another. This is explored by the boolean expressions in
 \cite{deffuant_mixing_2000} the multidimensional opinion for each agent is
 instead used merely as an element in a vector space whose (Hamming) distance
 from other agents' multidimensional opinions can be computed and compared to a
-BC threshold.
+BC threshold. 
 
-With respect to these previous efforts, my model resembles the BVM but gives
-the agents continuous, multidimensional opinions. My model also implements BC, but in
+With respect to these previous efforts, my model resembles the BVM, but gives
+the agents continuous, multidimensional opinions. Each agent will have one opinion on each issue in the model. If there are four issues in the model, the agents will have an opinion on a continuum from 0 to 1 for each issue. 
+
+My model also implements BC, but in
 a different way than models like \cite{tsang_opinion_2014} do: before accepting
 the influence of a fellow agent on an issue, an agent in my model must already
-be close in opinion to that agent on a \textit{different} issue. Additionally, agents may be repelled away from each other on a different issue if the difference in their opinions is large enough on another seperate issue. This mechanism I refer to as  
+be close in opinion to that agent on a \textit{different} issue. Additionally, agents may be repelled away from each other on a different issue if the difference in their opinions is large enough on another separate issue. This mechanism I refer to as  
 cross-issue influence is meant to mimic a phenomenon of human behavior: if I learn that your viewpoint on
 issue A is close to my own, homophily suggests that I will trust you, and I
 will therefore be willing to consider your viewpoint on issue B. If I think you do not have a reasonable opinion on issue A, I will move away from you on issue B. To my
