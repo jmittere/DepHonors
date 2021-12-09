@@ -25,7 +25,7 @@ On the other side of openness, evidence\cite{cholvy_diffusion_2016} shows that n
 
 \subsubsection{Edge probability}
 
-The other parameter represented in my model is the \textit{density} of social
+Another parameter represented in my model is the \textit{density} of social
 connections. To implement the concept of different degrees of social
 connection, I used the Erd\"{o}s-R\'{e}nyi graph generation algorithm to
 generate a random graph of connected nodes. With the Erd\"{o}s-R\'{e}nyi graph
@@ -36,7 +36,7 @@ result, edge probability directly corresponds to the density of social
 connections in my model.    
 
 \subsubsection{Cross-Issue Influence}
-The novel cross-issue influence mechanism that I introduced earlier is the final dependent variable in the model. The cross-issue influence variable (or CI2) has a boolean value. If the value is true, all agents in the model follow the novel CI2 mechanism. If the value is false, all agents in the model follow the same-issue influence mechanism (or I2).
+The novel cross-issue influence mechanism that I introduced earlier is the final independent variable in the model. The cross-issue influence variable (or CI2) has a boolean value. If the value is true, all agents in the model follow the novel CI2 mechanism. If the value is false, all agents in the model follow the same-issue influence mechanism (or I2).
 
 Same-issue influence is based on the traditional bounded-confidence mechanism mentioned earlier. Cross-issue influence is an extension of this mechanism. With same-issue influence, individuals compare and receive influence on only one issue at a time. With cross-issue influence, agents compare their opinion to their neighbors on one issue, then receive influence on another issue that is not the same as the comparison issue. A more specific walk-through of the CI2 mechanism compared to I2 will be explained later on in the model section of this paper. 
 
